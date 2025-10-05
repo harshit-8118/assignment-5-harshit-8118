@@ -28,7 +28,7 @@ The analysis was conducted in three main parts:
 
 ### **Part B: t-SNE and Veracity Inspection**
 - Applied **t-Distributed Stochastic Neighbor Embedding (t-SNE)** on the scaled feature space.
-- Tested multiple perplexity values (`5, 15, 30, 50, 80`) to evaluate trade-offs between local and global structure preservation.
+- Tested multiple perplexity values (`5, 20, 30, 40, 50, 70, 100, 120`) to evaluate trade-offs between local and global structure preservation.
 - Final perplexity chosen: **50**, as it provided the best balance between local cluster cohesion and global separation.
 - Analyzed the resulting embedding to identify:
   - **Noisy/Ambiguous labels:** overlapping clusters of different colors.
@@ -36,7 +36,7 @@ The analysis was conducted in three main parts:
   - **Hard-to-learn samples:** mixed-color regions indicating class ambiguity.
 
 ### **Part C: Isomap and Manifold Learning**
-- Applied **Isomap** with varying neighborhood sizes (`n_neighbors = 5, 10, 15`).
+- Applied **Isomap** with varying neighborhood sizes (`n_neighbors = 5, 10`).
 - Compared results with t-SNE using quantitative metrics:
   - **Trustworthiness (local preservation):** t-SNE = 0.9316, Isomap = 0.7216  
   - **Distance correlation (global preservation):** t-SNE = 0.4087, Isomap = 0.4739
@@ -61,8 +61,7 @@ The submission is organized as follows. For a complete evaluation, all files lis
 
 1. Open `Assignment_5.ipynb` in **Jupyter Notebook** or **VS Code (Python environment)**.  
 2. Ensure the following Python libraries are installed:
-   - `numpy`, `pandas`, `matplotlib`, `seaborn`
-   - `scikit-learn`, `scipy`, `umap-learn`
+   - `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `scipy`, 
 3. Run all cells sequentially.  
    The notebook is self-contained and automatically performs:
    - Data preprocessing
