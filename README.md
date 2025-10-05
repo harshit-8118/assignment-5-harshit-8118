@@ -7,8 +7,7 @@
 
 ## 1. Objective
 
-This assignment explores how **non-linear dimensionality reduction techniques** can help in understanding challenges within **multi-label classification** problems, particularly focusing on **data veracity** issues such as noisy labels, outliers, and hard-to-learn samples.  
-The analysis is based on the **Yeast dataset**, a biological dataset frequently used to study gene function prediction.
+This assignment explores how **non-linear dimensionality reduction techniques** can help in understanding challenges within **multi-label classification** problems, particularly focusing on **data veracity** issues such as noisy labels, outliers, and hard-to-learn samples. The analysis is based on the **Yeast dataset**, a biological dataset frequently used to study gene function prediction.
 
 The main goal is to apply and compare **t-SNE** and **Isomap** to visualize complex high-dimensional gene expression data and interpret what these visualizations reveal about the dataset’s manifold structure and classification challenges.
 
@@ -61,7 +60,7 @@ The submission is organized as follows. For a complete evaluation, all files lis
 
 1. Open `Assignment_5.ipynb` in **Jupyter Notebook** or **VS Code (Python environment)**.  
 2. Ensure the following Python libraries are installed:
-   - `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `scipy`, 
+   - `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `scipy`, `skmultilearn`
 3. Run all cells sequentially.  
    The notebook is self-contained and automatically performs:
    - Data preprocessing
@@ -75,7 +74,3 @@ The submission is organized as follows. For a complete evaluation, all files lis
 - The **t-SNE** visualization effectively revealed **local clusters**, making it ideal for detecting **noisy and ambiguous samples**.  
 - The **Isomap** embedding provided better insight into **global manifold geometry**, showing that the data lies on a **nonlinear, moderately curved manifold**.
 - The curvature and overlap of class regions indicate why **linear classifiers** would struggle on this dataset.
-- For better model performance:
-  - Use **nonlinear classifiers** such as kernel SVM or neural networks.
-  - Consider **manifold-aware approaches** (e.g., UMAP or supervised embeddings).
-  - Explore **metric learning** or **representation learning** to adapt to manifold complexity.
